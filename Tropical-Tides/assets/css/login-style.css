@@ -1,0 +1,10 @@
+body {
+    font-family: "Inknut Antiqua", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
