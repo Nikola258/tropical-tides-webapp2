@@ -40,6 +40,7 @@ h2 {
     font-size: 30px;
 }
 
+input[type="text"],
 input[type="email"],
 input[type="password"] {
     font-family: "Inknut Antiqua", serif;
@@ -53,6 +54,7 @@ input[type="password"] {
     font-size: medium;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
+
 
 input::placeholder {
     color: rgba(18, 17, 19, 0.6);

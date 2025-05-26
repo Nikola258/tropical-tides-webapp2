@@ -4,52 +4,35 @@
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" href="assets/css/auth-style.css">
-    <link rel="stylesheet" href="assets/js/login.js">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<video autoplay muted loop>
-    <source src="assets/img/login-background.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+    <video autoplay muted loop>
+        <source src="assets/img/login-background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-<!-- Loginformulier -->
-<form method="POST" action="login_handler.php">
-    <h2>Register</h2>
+    <form method="POST" action="#">
+        <h2>Register</h2>
 
-    <!-- CSRF bescherming -->
-    <input type="hidden" name="csrf_token" value="VEILIGE_TOKEN_HIER">
+    <!-- CSRF Token (static placeholder) -->
+    <!-- Voegt een verborgen beveiligingsveld toe aan een formulier -->
+        <input type="hidden" name="csrf_token" value="">
 
-    <!-- Username -->
-    <input type="password" name="password" placeholder="Confirm assword" required value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>">
-
-    <!-- Email -->
-    <input type="email" name="email" placeholder="Email Address" required value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
-
-    <!-- Error email -->
-    <?php if (isset($errors['email'])): ?>
-            <strong><?php echo $errors['email']; ?></strong>
-    <?php endif; ?>
-
-    <!-- Password -->
-    <input type="password" name="password" placeholder="Password" required>
-
-    <!-- Error password -->
-    <?php if (isset($errors['password'])): ?>
-            <strong><?php echo $errors['password']; ?></strong>
-    <?php endif; ?>
-
-    <!-- Confirm password -->
-    <input type="password" name="password" placeholder="Confirm assword" required value="<?php echo isset($_POST['password']) ? htmlspecialchars($_POST['password']) : ''; ?>">
-
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
 
     <!-- Buttons -->
-    <div class="button-container">
-        <button type="submit" class="login-button">Create</button>
-        <button type="button" onclick="window.history.back();" class="back-button">Back</button>
-        <div class="register-button" type="button">Need to login? → <a class="register-text" href="login.php">Login</a></div>
-    </div>
-</form>
+        <div class="button-container">
+            <button type="submit" class="login-button">Create Account</button>
+            <button type="button" onclick="window.history.back();" class="back-button">Back</button>
+            <div class="register-button">
+                Already have an account? <a class="register-text" href="login.php">Login</a>
+            </div>
+        </div>
+    </form>
 </body>
 </html>

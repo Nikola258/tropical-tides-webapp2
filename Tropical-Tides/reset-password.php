@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="assets/css/auth-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
 </head>
@@ -13,34 +13,25 @@
     Your browser does not support the video tag.
 </video>
 
-<form method="POST" action="auth.php">
-    <h2>Login</h2>
+<form method="POST" action="#">
+    <h2>Reset password</h2>
 
-    <!-- CSRF Token (placeholder for now) -->
+    <!-- CSRF Token (static placeholder) -->
     <!-- Voegt een verborgen beveiligingsveld toe aan een formulier -->
     <input type="hidden" name="csrf_token" value="">
 
     <input type="email" name="email" placeholder="Email Address" required>
     <input type="password" name="password" placeholder="Password" required>
-
-    <!-- Remember me -->
-    <div class="remember-me">
-        <input type="checkbox" name="remember" id="remember">
-        <label for="remember">Keep me logged in</label>
-    </div>
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
 
     <!-- Buttons -->
     <div class="button-container">
-        <button type="submit" class="login-button">Login</button>
+        <button type="submit" class="login-button">Confirm</button>
         <button type="button" onclick="window.history.back();" class="back-button">Back</button>
         <div class="register-button">
-            Forgot password? → <a class="register-text" href="reset-password.php">Reset password</a>
-        </div>
-        <div class="register-button">
-            Need to register? → <a class="register-text" href="register.php">Register</a>
+            Password sucessfull? <a class="register-text" href="login.php">Login</a>
         </div>
     </div>
 </form>
-
 </body>
 </html>
