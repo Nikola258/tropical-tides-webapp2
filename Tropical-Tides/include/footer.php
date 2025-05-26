@@ -17,7 +17,7 @@
             
             <a href="https://github.com/dashboard"><img src="../assets/img/github.png" alt="instagram" width="50"
                     height="50"></a>
-            <a href="https://www.linkedin.com/mynetwork/grow/?skipRedirect=true"><img src="../assets/img/linkin.png"
+            <a href="https://www.linkedin.com/mynetwork/grow/?skipRedirect=true"><img src="../assets/img/linkedin.png"
                     alt="snapchat" width="50" height="50"></a>
           
         </section>
