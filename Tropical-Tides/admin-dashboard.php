@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include "include/dashboard-sidebar.php"; ?>
+    <?php include "include/admin-dashboard-sidebar.php"; ?>
 
     <div class="content">
         <h1>Welcome to the Admin Dashboard.</h1>

@@ -5,7 +5,7 @@ body {
 }
 
 .sidebar {
-    width: 250px;
+    width: 275px;
     height: 100vh;
     background-color: #0b3954;
     color: white;
@@ -29,14 +29,14 @@ body {
 }
 
 .content {
-    margin-left: 250px;
+    margin-left: 300px;
     padding: 20px;
     flex-grow: 1;
 }
 .hold-dashboard-link{
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 55px;
     gap: 10px;
 }
 img{

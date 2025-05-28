@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="stylesheet" href="assets/css/auth-style.css">
+    <link rel="stylesheet" href="../assets/css/auth-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <video autoplay muted loop>
-        <source src="assets/img/login-background.mp4" type="video/mp4">
+        <source src="../assets/img/login-background.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 

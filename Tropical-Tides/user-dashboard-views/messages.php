@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="/assets/css/dashboard-ui.css">
 </head>
 <body>
-<?php include "../include/admin-dashboard-sidebar.php"; ?>
+<?php include "../include/user-dashboard-sidebar.php"; ?>
 
     <div class="content">
-        <h1>Welcome to the Customers Page.</h1>
-        <p>Here you can review and manage incoming messages from customers to provide timely support and communication.</p>
+        <h1>Welcome to the Messages Page.</h1>
+        <p>Here you can read and manage messages sent by customers.</p>
     </div>
 
 </body>
