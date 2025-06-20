@@ -20,10 +20,9 @@ $personen  = $_GET["personen"];
 $datum = $_GET["datum"];
 
 $stmt = $conn->prepare("SELECT * FROM booking WHERE plaats LIKE :plaats");
-// AND personen = :personen AND datum= :datum LIKE :plaats AND :personen AND :datum
 $stmt->bindParam(":plaats", $plaats);
-//$stmt->bindParam(":personen", $personen);
-//$stmt->bindParam(":datum", $datum);
+$stmt->bindParam(":personen", $personen);
+$stmt->bindParam(":datum", $datum);
 
 $stmt->execute();
 $result = $stmt->fetchAll();

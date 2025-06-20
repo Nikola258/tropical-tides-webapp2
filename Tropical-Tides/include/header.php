@@ -17,7 +17,7 @@
             <a href="/index.php">Home</a>
             <a href="/about.php">About</a>
             <a href="#">Booking</a>
-            <a href="/login.php">Login</a>
+            <a href="../../auth-views/login.php">Login</a>
         </nav>
     </div>
 </body>
