@@ -1,6 +1,6 @@
 <?php
 
-include('./dbcalls/conn.php');
+include('../dbcalls/conn.php');
 
 $id = $_POST['id'];
 

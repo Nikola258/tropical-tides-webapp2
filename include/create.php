@@ -2,7 +2,7 @@
 <h1>create</h1>
 
 <?php
-include ('./db.php');
+include('./db.php');
 
 $plaats = $_POST['plaats'];
 $beschrijving = $_POST['beschrijving'];
@@ -27,7 +27,7 @@ $stmt->bindParam(":datum", $datum);
 
 
 $stmt->execute();
-header(header:'location: ../index.php');
+
 
 
 ?>

@@ -1,10 +1,9 @@
-<!<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
 
 
     <title>Document</title>
@@ -19,8 +18,14 @@ $plaats  = '%' . $_GET["plaats"]. '%';
 $personen  = $_GET["personen"];
 $datum = $_GET["datum"];
 
-$stmt = $conn->prepare("SELECT * FROM booking WHERE plaats LIKE :plaats");
+$stmt = $conn->prepare("SELECT * FROM booking   
+    WHERE plaats LIKE :plaats
+    AND personen = :personen
+    AND datum = :datum");
+
 $stmt->bindParam(":plaats", $plaats);
+$stmt->bindParam(":personen", $personen);
+$stmt->bindParam(":datum", $datum);
 $stmt->bindParam(":personen", $personen);
 $stmt->bindParam(":datum", $datum);
 
@@ -63,3 +68,5 @@ $result = $stmt->fetchAll();
 
     } ?>
 </section>
+
+</body>

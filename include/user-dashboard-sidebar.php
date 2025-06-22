@@ -31,7 +31,7 @@
 
         <div class="hold-dashboard-link">
             <img src="/assets/img/logout-icon.png" alt="img">
-            <a href="/logout.php">Logout</a>
+            <a href="../index.php">Logout</a>
         </div>
 </section>
 
