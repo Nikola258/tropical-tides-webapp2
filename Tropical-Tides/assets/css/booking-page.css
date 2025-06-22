@@ -1,0 +1,290 @@
+/* General Page Styles */
+.booking-page-main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffc107; /* Bright yellow background */
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.booking-form .form-group {
+    flex: 1;
+    min-width: calc(50% - 10px); /* Two columns layout */
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #0d6efd; /* Blue background from image */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.booking-form input::placeholder {
+    color: #aaccff;
+}
+
+.booking-form input:focus {
+    outline: none;
+    background-color: #0a58ca;
+}
+
+/* Specifically for date inputs to show the calendar icon correctly */
+.booking-form input[type="date"] {
+    color-scheme: dark;
+}
+
+.booking-form .submit-row {
+    justify-content: center;
+}
+
+.booking-form input[type="submit"] {
+    background-color: #0d6efd;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    max-width: 250px; /* Centered submit button width */
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: #0a58ca;
+}
+
+/* Success/Error Alerts */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+}
+.alert-success {
+    background-color: #28a745;
+}
+.alert-danger {
+    background-color: #dc3545;
+}
+
+/* Destinations Section */
+.destinations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.destination-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 1px solid #ddd;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+}
+
+.destination-card .card-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.destination-card .card-body {
+    flex: 1;
+}
+
+.card-title-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-title-rating h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.rating {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333; /* Making text black to match image */
+}
+
+.rating:after {
+    content: ' \\2605'; /* Star character */
+    color: #ffc107;
+}
+
+.card-body .description, .card-body .price {
+    margin: 5px 0;
+    color: #555;
+    font-weight: bold;
+}
+
+.card-links {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.card-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.card-links a:hover {
+    text-decoration: underline;
+}
+
+/* General Booking Page Container */
+.booking-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 5%;
+    background-color: #f9f9f9;
+}
+
+/* Form and Destinations Sections */
+.booking-form-section,
+.destinations-section {
+    width: 100%;
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 1024px) {
+    .booking-form-section {
+        width: 48%;
+    }
+    .destinations-section {
+        width: 48%;
+    }
+}
+
+.booking-form-section h2,
+.destinations-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00C2FF;
+    padding-bottom: 10px;
+}
+
+/* Warning for non-logged-in users */
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+}
+.alert-warning a {
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Destinations Grid */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.destination-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.destination-card .card-content {
+    padding: 15px;
+}
+
+.destination-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.destination-card p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #00C2FF;
+    font-size: 1.1em;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 1.2em;
+} 
