@@ -28,9 +28,9 @@
             <section class="info_row">
                <nav>
                     <ul class="options">
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Safety & Privacy</a></li>
-                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="../contact.php">Contact</a></li>
+                        <li><a href="../safety-privacy.php">Safety & Privacy</a></li>
+                        <li><a href="../terms-of-service.php">Terms of Service</a></li>
 
                     </ul>
                 </nav>
@@ -38,9 +38,9 @@
             <section class="info_row">
                 <nav>
                     <ul class="options">
-                        <li><a href="">Cookies</a></li>
-                        <li><a href="">Location & Information</a></li>
-                        <li><a href="">Feedback</a></li>
+                        <li><a href="../cookies.php">Cookies</a></li>
+                        <li><a href="../location-info.php">Location & Information</a></li>
+                        <li><a href="../feedback.php">Feedback</a></li>
 
                     </ul>
                 </nav>
