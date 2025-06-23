@@ -293,3 +293,94 @@ footer{
     color: #ffbf00;
     font-size: 1.2em;
 }
+.hero-overlay-ts{
+    position: relative;
+    background: url('https://th.bing.com/th/id/R.371d74f6d9ebfa41550ea08d29361c15?rik=ddHUiuIC9JIa6Q&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f1PyhUuU.jpg&ehk=GlwoG%2fxPB8a1wwWThzxGGHtsBa%2fmZi295DBY3%2bepYoM%3d&risl=&pid=ImgRaw&r=0') center/cover no-repeat fixed;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: black solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hero-ck{
+    position: relative;
+    background: url('https://wallpapers.com/images/file/beach-scene-pictures-vfpldpy7h49xafiq.jpg') center/cover no-repeat fixed;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: black solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hero-location-information{
+    position: relative;
+    background: url('https://wallpapercrafter.com/desktop6/1574887-bay-beach-carribean-island-ocean-sea-tropic.jpg') center/cover no-repeat fixed;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: black solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hero-sp{
+    position: relative;
+    background: url('https://www.okvoyage.com/wp-content/uploads/2020/10/plages-du-montenegro.jpeg') center/cover no-repeat fixed;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: black solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hero-contact{
+    position: relative;
+    background: url('https://i.pinimg.com/originals/09/a3/33/09a3339523f33a486921a44f683326ad.jpg') center/cover no-repeat fixed;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: black solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hero-fb{
+    position: relative;
+    background: url('https://wallpapercave.com/wp/wp3339586.jpg') center/cover no-repeat fixed;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: black solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hero-about{
+    position: relative;
+    background: url('https://wallpapercave.com/wp/wp3339586.jpg') center/cover no-repeat fixed;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: black solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hero-booking{
+    position: relative;
+    background: url("https://s1.1zoom.me/b5050/362/379547-svetik_3840x2400.jpg") center/cover fixed;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: black solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/*
+assets/img/plane-over-beach.png
+*/

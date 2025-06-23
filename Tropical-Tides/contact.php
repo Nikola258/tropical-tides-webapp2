@@ -18,7 +18,7 @@ if (isset($_SESSION['page_message'])) {
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="hero">
+    <div class="hero-contact">
         <div class="hero-overlay"></div>
         <div class="header-absolute">
             <?php include "include/header.php"; ?>

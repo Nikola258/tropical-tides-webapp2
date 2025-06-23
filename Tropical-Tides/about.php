@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="hero">
+    <div class="hero-about">
         <div class="hero-overlay"></div>
         <div class="header-absolute">
             <?php include "include/header.php"; ?>
