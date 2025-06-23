@@ -27,6 +27,7 @@ if (isset($_SESSION['page_message'])) {
 function generate_stars($rating) {
     $stars = '';
     for ($i = 1; $i <= 5; $i++) {
+                                 //filled star  empty star
         $stars .= $i <= $rating ? '&#9733;' : '&#9734;';
     }
     return $stars;

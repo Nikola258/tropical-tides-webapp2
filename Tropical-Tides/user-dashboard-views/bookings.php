@@ -30,7 +30,7 @@ try {
 <div class="main-content-header">
     <h1>My Bookings</h1>
     <p>Here is an overview of all your past and upcoming trips.</p>
-</div>
+    </div>
 
 <div class="table-container">
     <?php if (empty($bookings)): ?>
