@@ -48,8 +48,13 @@ img{
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 20px;
     padding-bottom: 15px;
+    margin-left: 350px;
+    margin-top: 50px;
 }
-
+.main-content-header-messages{
+    margin-top: 75px;
+    margin-left: -700px;
+}
 .main-content-header h1 {
     font-size: 24px;
     color: #333;
@@ -61,7 +66,13 @@ img{
     color: #777;
     margin-top: 5px;
 }
-
+.main-content{
+    margin: 0;
+    padding: 0;
+}
+.table-container{
+    margin-left: 350px;
+}
 .data-table {
     width: 100%;
     border-collapse: collapse;

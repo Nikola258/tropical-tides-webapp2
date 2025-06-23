@@ -27,10 +27,24 @@ try {
 }
 ?>
 
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/dashboard-ui.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<?php include "./include/user-dashboard-sidebar.php"; ?>
+
 <div class="main-content-header">
     <h1>My Bookings</h1>
     <p>Here is an overview of all your past and upcoming trips.</p>
-    </div>
+</div>
 
 <div class="table-container">
     <?php if (empty($bookings)): ?>
@@ -40,27 +54,29 @@ try {
     <?php else: ?>
         <table class="data-table">
             <thead>
-                <tr>
-                    <th>Booking ID</th>
-                    <th>Destination</th>
-                    <th>Guests</th>
-                    <th>Arrival Date</th>
-                    <th>Leaving Date</th>
-                    <th>Booked On</th>
-                </tr>
+            <tr>
+                <th>Booking ID</th>
+                <th>Destination</th>
+                <th>Guests</th>
+                <th>Arrival Date</th>
+                <th>Leaving Date</th>
+                <th>Booked On</th>
+            </tr>
             </thead>
             <tbody>
-                <?php foreach ($bookings as $booking): ?>
-                    <tr>
-                        <td>#<?php echo htmlspecialchars($booking['id']); ?></td>
-                        <td><?php echo htmlspecialchars($booking['plaats']); ?></td>
-                        <td><?php echo htmlspecialchars($booking['personen']); ?></td>
-                        <td><?php echo htmlspecialchars(date("d-m-Y", strtotime($booking['arrivals_date']))); ?></td>
-                        <td><?php echo htmlspecialchars(date("d-m-Y", strtotime($booking['leaving_date']))); ?></td>
-                        <td><?php echo htmlspecialchars(date("d-m-Y H:i", strtotime($booking['booking_date']))); ?></td>
-                    </tr>
-                <?php endforeach; ?>
+            <?php foreach ($bookings as $booking): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($booking['id']); ?></td>
+                    <td><?php echo htmlspecialchars($booking['plaats']); ?></td>
+                    <td><?php echo htmlspecialchars($booking['personen']); ?></td>
+                    <td><?php echo htmlspecialchars(date("d-m-Y", strtotime($booking['arrivals_date']))); ?></td>
+                    <td><?php echo htmlspecialchars(date("d-m-Y", strtotime($booking['leaving_date']))); ?></td>
+                    <td><?php echo htmlspecialchars(date("d-m-Y H:i", strtotime($booking['booking_date']))); ?></td>
+                </tr>
+            <?php endforeach; ?>
             </tbody>
         </table>
     <?php endif; ?>
 </div>
+</body>
+</html>
