@@ -379,3 +379,62 @@ footer{
     border-bottom: black solid;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+.edit-btn {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background 0.2s;
+}
+.edit-btn:hover {
+    background: #1c5a85;
+}
+.delete-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.delete-btn:hover {
+    background: #c0392b;
+}
+.edit-content {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    margin-top: -60px;
+    align-items: start;
+}
+.edit-btn {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background 0.2s;
+}
+.edit-btn:hover {
+    background: #1c5a85;
+}
+.cancel-btn {
+    background: #aaa;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.cancel-btn:hover {
+    background: #888;
+}

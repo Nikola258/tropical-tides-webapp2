@@ -26,12 +26,12 @@
 
         <div class="hold-dashboard-link">
             <img src="../assets/img/booking-icon.png" alt="img">
-            <a href="../user-dashboard-views/bookings.php">Bookings</a>
+            <a href="../booking.php">Booking</a>
         </div>
 
         <div class="hold-dashboard-link">
             <img src="../assets/img/logout-icon.png" alt="img">
-            <a href="../index.php">Logout</a>
+            <a href="../auth-views/logout.php">Logout</a>
         </div>
 </section>
 

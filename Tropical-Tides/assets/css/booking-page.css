@@ -152,11 +152,6 @@
     color: #333; /* Making text black to match image */
 }
 
-.rating:after {
-    content: ' \\2605'; /* Star character */
-    color: #ffc107;
-}
-
 .card-body .description, .card-body .price {
     margin: 5px 0;
     color: #555;

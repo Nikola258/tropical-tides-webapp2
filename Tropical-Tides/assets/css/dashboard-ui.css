@@ -27,11 +27,24 @@ body {
     background-color: #34495e;
     border-radius: 20px;
 }
-
+.content-messages{
+    flex-grow: 1;
+    z-index: 0;
+    margin-left: 350px;
+    margin-top: 50px;
+}
 .content {
     margin-left: 0;
     flex-grow: 1;
     z-index: 0;
+}
+.crud-item-messages{
+    margin-bottom: 18px;
+    border-left: 4px solid #00C2FF;
+    padding-left: 18px;
+    background: #fafdff;
+    width: 50%;
+    border-radius: 10px;
 }
 .hold-dashboard-link{
     display: flex;
@@ -51,16 +64,19 @@ img{
     margin-left: 350px;
     margin-top: 50px;
 }
-.main-content-header-messages{
-    margin-top: 75px;
-    margin-left: -700px;
-}
 .main-content-header h1 {
     font-size: 24px;
     color: #333;
     margin: 0;
 }
-
+.destinations-content{
+    flex-grow: 1;
+    z-index: 0;
+    gap: 250px;
+    display: flex;
+    align-items: start;
+    margin-top: 50px;
+}
 .main-content-header p {
     font-size: 14px;
     color: #777;

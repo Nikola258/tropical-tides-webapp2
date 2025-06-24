@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include('dbcalls/conn.php');
 
 // Fetch all available destinations to display
@@ -70,11 +72,19 @@ if (isset($_SESSION['page_message'])) {
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="naam" placeholder="Enter your name" value="<?php echo htmlspecialchars($user_data['name'] ?? ''); ?>" <?php echo isset($user_data) ? 'readonly' : ''; ?> required>
+                        <input type="text" id="name" name="naam" placeholder="Enter your name" 
+                        <?php if (isset($user_data) && $user_data): ?>
+                            value="<?php echo htmlspecialchars($user_data['name']); ?>" readonly
+                        <?php endif; ?>
+                        required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" value="<?php echo htmlspecialchars($user_data['email'] ?? ''); ?>" <?php echo isset($user_data) ? 'readonly' : ''; ?> required>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" 
+                        <?php if (isset($user_data) && $user_data): ?>
+                            value="<?php echo htmlspecialchars($user_data['email']); ?>" readonly
+                        <?php endif; ?>
+                        required>
                     </div>
                 </div>
                 <div class="form-row">

@@ -1,9 +1,6 @@
 <?php
-session_start();
-// check of user is ingelogd, anders terugsturen
-if (!isset($_SESSION['user_id'])) {
-    header('Location: auth-views/login.php');
-    exit();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
 }
 
 include('dbcalls/conn.php');
@@ -27,7 +24,6 @@ if (isset($_SESSION['page_message'])) {
 function generate_stars($rating) {
     $stars = '';
     for ($i = 1; $i <= 5; $i++) {
-                                 //filled star  empty star
         $stars .= $i <= $rating ? '&#9733;' : '&#9734;';
     }
     return $stars;
@@ -58,33 +54,39 @@ function generate_stars($rating) {
         <p>Share your experience and help other travelers!</p>
 
         <?php if ($page_message): ?>
-            <div class="alert" style="padding: 10px; background: #e6f7ff; border-left: 4px solid #00C2FF; margin-bottom: 15px;"><?php echo htmlspecialchars($page_message); ?></div>
+            <div class="alert" style="padding: 10px; background: #e6f7ff; border-left: 4px solid #00C2FF; margin-bottom: 15px;">
+                <?php echo htmlspecialchars($page_message); ?>
+            </div>
         <?php endif; ?>
 
         <div class="crud-item">
-            <p style="margin-bottom: 15px;">You leave a review when: <strong><?php echo htmlspecialchars($_SESSION['name']); ?></strong></p>
-            <form action="include/feedback-action.php" method="post" class="crud-form" style="padding-top: 10px;">
-                <label for="plaats">Choose a location:</label>
-                <select name="plaats" id="plaats" required style="flex: 2 1 200px; padding: 8px 12px; border: 1px solid #cce7f6; border-radius: 6px; background: #f4faff;">
-                    <?php foreach ($locations as $location): ?>
-                        <option value="<?php echo htmlspecialchars($location); ?>"><?php echo htmlspecialchars($location); ?></option>
-                    <?php endforeach; ?>
-                </select>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <p style="margin-bottom: 15px;">You leave a review when: <strong><?php echo htmlspecialchars($_SESSION['name']); ?></strong></p>
+                <form action="include/feedback-action.php" method="post" class="crud-form" style="padding-top: 10px;">
+                    <label for="plaats">Choose a location:</label>
+                    <select name="plaats" id="plaats" required style="flex: 2 1 200px; padding: 8px 12px; border: 1px solid #cce7f6; border-radius: 6px; background: #f4faff;">
+                        <?php foreach ($locations as $location): ?>
+                            <option value="<?php echo htmlspecialchars($location); ?>"><?php echo htmlspecialchars($location); ?></option>
+                        <?php endforeach; ?>
+                    </select>
 
-                <label for="user_rating">Rating:</label>
-                <div class="star-rating">
-                    <input type="radio" id="5-stars" name="user_rating" value="5" required/><label for="5-stars" class="star">&#9733;</label>
-                    <input type="radio" id="4-stars" name="user_rating" value="4" /><label for="4-stars" class="star">&#9733;</label>
-                    <input type="radio" id="3-stars" name="user_rating" value="3" /><label for="3-stars" class="star">&#9733;</label>
-                    <input type="radio" id="2-stars" name="user_rating" value="2" /><label for="2-stars" class="star">&#9733;</label>
-                    <input type="radio" id="1-star" name="user_rating" value="1" /><label for="1-star" class="star">&#9733;</label>
-                </div>
-                
-                <label for="user_review">Note:</label>
-                <textarea name="user_review" id="user_review" rows="2" style="width:100%; border-radius:6px; padding:8px;"></textarea>
-                
-                <input type="submit" name="feedback_submit" value="Leave a review">
-            </form>
+                    <label for="user_rating">Rating:</label>
+                    <div class="star-rating">
+                        <input type="radio" id="5-stars" name="user_rating" value="5" required/><label for="5-stars" class="star">&#9733;</label>
+                        <input type="radio" id="4-stars" name="user_rating" value="4" /><label for="4-stars" class="star">&#9733;</label>
+                        <input type="radio" id="3-stars" name="user_rating" value="3" /><label for="3-stars" class="star">&#9733;</label>
+                        <input type="radio" id="2-stars" name="user_rating" value="2" /><label for="2-stars" class="star">&#9733;</label>
+                        <input type="radio" id="1-star" name="user_rating" value="1" /><label for="1-star" class="star">&#9733;</label>
+                    </div>
+                    
+                    <label for="user_review">Note:</label>
+                    <textarea name="user_review" id="user_review" rows="2" style="width:100%; border-radius:6px; padding:8px;"></textarea>
+                    
+                    <input type="submit" name="feedback_submit" value="Leave a review">
+                </form>
+            <?php else: ?>
+                <p style="margin-bottom: 15px;">You must be <a href="auth-views/login.php">logged in</a> to leave a review.</p>
+            <?php endif; ?>
         </div>
         
         <h2 style="margin-top: 40px;">All Reviews</h2>
