@@ -14,35 +14,33 @@
             <?php include "include/header.php"; ?>
         </div>
         <div class="hero-content">
-            <div class="hero-title">Cookies</div>
+            <div class="hero-title">Cookies on Tropical Tides</div>
         </div>
     </div>
     <div class="section founded">
         <div class="founded-text">
             <h2 style="margin-top:0; font-size:1.4em; font-weight:bold; color:#222;">Cookies op Tropical Tides</h2>
             <p style="color:#222; font-size:1.05em;">
-                Onze website gebruikt cookies om jouw ervaring te verbeteren. Cookies zijn kleine tekstbestanden die op je apparaat worden opgeslagen. Ze helpen ons om de website goed te laten werken en om te onthouden dat je bijvoorbeeld onze cookie-melding hebt geaccepteerd.
-            </p>
+                Our website uses cookies to improve your experience. Cookies are small text files that are stored on your device. They help us to make the website work properly and to remember, for example, that you have accepted our cookie notice.            </p>
             <p style="color:#222; font-size:1.05em;">
-                Je kunt je cookievoorkeuren altijd aanpassen door de cookie-melding te accepteren of te weigeren. (Let op: op dit moment heeft het weigeren van cookies geen invloed op de werking van de site, maar je krijgt wel minder meldingen!)
-            </p>
+                You can always adjust your cookie preferences by accepting or rejecting the cookie notice. (Note: at this moment, refusing cookies has no impact on the functionality of the site, but you will receive fewer notifications!)            </p>
         </div>
         <div class="founded-img">
             <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Cookies">
         </div>
     </div>
-    <div class="section-title">Jouw keuze</div>
+    <div class="section-title">Your choice</div>
     <div class="section best">
         <div class="what-we-do">
             <div class="do-item">
                 <img src="/assets/img/pathway.png" alt="Cookies accepteren">
-                <div class="do-title snorkel">Cookies accepteren</div>
-                <small>Door cookies te accepteren, krijg je de beste ervaring op onze website.</small>
+                <div class="do-title snorkel">Accept cookies</div>
+                <small>By accepting cookies, you get the best experience on our website.</small>
             </div>
             <div class="do-item">
                 <img src="/assets/img/sun.png" alt="Cookies weigeren">
-                <div class="do-title sun">Cookies weigeren</div>
-                <small>Je kunt cookies weigeren, maar de site blijft gewoon werken.</small>
+                <div class="do-title sun">Reject cookies</div>
+                <small>You can decline cookies, but the site will continue to function.</small>
             </div>
         </div>
     </div>

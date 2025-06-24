@@ -5,6 +5,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="../Tropical-Tides/assets/css/auth-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/auth-style.css">
 </head>
 <body>
 

@@ -19,35 +19,35 @@
     </div>
     <div class="section founded">
         <div class="founded-text">
-            <h2 style="margin-top:0; font-size:1.4em; font-weight:bold; color:#222;">Jouw veiligheid en privacy staan voorop</h2>
+            <h2 style="margin-top:0; font-size:1.4em; font-weight:bold; color:#222;">Your safety and privacy come first.</h2>
             <p style="color:#222; font-size:1.05em;">
-                Bij Tropical Tides zorgen we ervoor dat je zorgeloos kunt genieten van je reis. We werken alleen samen met betrouwbare partners en controleren al onze bestemmingen op veiligheid en kwaliteit. Of je nu avontuurlijke activiteiten onderneemt of ontspant op het strand, jouw welzijn is onze hoogste prioriteit.
+                At Tropical Tides, we ensure that you can enjoy your trip worry-free. We only work with trusted partners and assess all our destinations for safety and quality. Whether you are engaging in adventurous activities or relaxing on the beach, your well-being is our highest priority.
             </p>
             <p style="color:#222; font-size:1.05em;">
-                We gaan zorgvuldig om met jouw persoonlijke gegevens. Alle informatie die je met ons deelt, wordt veilig opgeslagen en nooit zonder jouw toestemming gedeeld met derden. Zo kun je met een gerust hart boeken en reizen.
+                We handle your personal data carefully. All information you share with us is stored securely and never shared with third parties without your consent. This way, you can book and travel with peace of mind.
             </p>
         </div>
         <div class="founded-img">
             <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Veiligheid en privacy">
         </div>
     </div>
-    <div class="section-title">Onze Belofte</div>
+    <div class="section-title">Our Promise</div>
     <div class="section best">
         <div class="what-we-do">
             <div class="do-item">
                 <img src="/assets/img/pathway.png" alt="Veiligheid">
-                <div class="do-title snorkel">Veiligheid op Reis</div>
-                <small>We bieden 24/7 ondersteuning en werken alleen met gecertificeerde gidsen en vervoerders.</small>
+                <div class="do-title snorkel">Safety while Traveling</div>
+                <small>We provide 24/7 support and only work with certified guides and transporters.</small>
             </div>
             <div class="do-item">
                 <img src="/assets/img/sun.png" alt="Privacy">
-                <div class="do-title sun">Jouw Privacy</div>
-                <small>Jouw gegevens zijn bij ons veilig. We gebruiken moderne beveiligingstechnieken om je privacy te waarborgen.</small>
+                <div class="do-title sun">Your Privacy</div>
+                <small>Your data is safe with us. We use modern security techniques to ensure your privacy.</small>
             </div>
             <div class="do-item">
                 <img src="/assets/img/wave.png" alt="Zorgeloos Reizen">
-                <div class="do-title boat">Zorgeloos Reizen</div>
-                <small>Wij nemen alle zorgen uit handen, zodat jij alleen maar hoeft te genieten van je vakantie.</small>
+                <div class="do-title boat">Carefree Travel</div>
+                <small>We take all worries off your hands, so you only need to enjoy your holiday.</small>
             </div>
         </div>
     </div>

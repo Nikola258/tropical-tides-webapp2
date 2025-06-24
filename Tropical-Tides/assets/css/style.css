@@ -1,8 +1,8 @@
 body{
     height: 90vh;
     width: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 nav ul li a {
   display: block;
@@ -72,10 +72,8 @@ footer{
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     padding: 24px 20px 16px 20px;
     margin-bottom: 24px;
-    display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    align-items: center;
 }
 .crud-form label {
     flex: 1 1 120px;
@@ -191,7 +189,7 @@ footer{
 
 .mid_page {
     display: flex;
-    justif-content: center;  /* Note: 'justif-content' looks like a typo, should be 'justify-content' */
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -201,8 +199,8 @@ footer{
     width: 100%;
     height: 400px;
     z-index: -1;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     -webkit-user-drag: none;
 }
 
@@ -381,6 +379,3 @@ footer{
     border-bottom: black solid;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-/*
-assets/img/plane-over-beach.png
-*/

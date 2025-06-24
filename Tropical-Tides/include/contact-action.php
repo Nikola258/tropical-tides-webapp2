@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':message', $message_text);
             if ($stmt->execute()) {
-                $message = "Bericht succesvol verzonden!";
+                $message = "Message is successfully submitted!";
             } else {
                 $message = "Er is iets misgegaan. Probeer het opnieuw.";
             }

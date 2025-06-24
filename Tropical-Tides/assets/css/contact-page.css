@@ -1,0 +1,10 @@
+.contact-form{
+    width: 50%;
+    height: 25px;
+}
+input{
+    margin-bottom: 20px;
+}
+.send-button{
+    margin-top: 20px;
+}
