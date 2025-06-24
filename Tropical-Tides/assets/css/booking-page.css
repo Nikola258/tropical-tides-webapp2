@@ -13,12 +13,14 @@
     border-radius: 12px;
     margin-bottom: 40px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 75px;
+    margin-bottom: 125px;
 }
 
 .booking-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 45px;
 }
 
 .booking-form .form-row {
@@ -91,10 +93,14 @@
     font-weight: bold;
 }
 .alert-success {
-    background-color: #28a745;
+    background-color: #18ac00;
+    height: 30px;
+    align-items: center;
+    display: flex
+;
 }
 .alert-danger {
-    background-color: #dc3545;
+    background-color: #ff0019;
 }
 
 /* Destinations Section */
@@ -287,4 +293,20 @@
 .rating {
     color: #ffc107;
     font-size: 1.2em;
-} 
+}
+.where-to{
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #0d6efd;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+select option {
+    background-color: #00c2ff;
+    font-family: "Inknut Antiqua", serif;
+    color: #121113;
+}

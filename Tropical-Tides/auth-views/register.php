@@ -5,6 +5,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="../Tropical-Tides/assets/css/auth-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/auth-style.css">
 </head>
 <body>
 
@@ -30,7 +31,7 @@
             <button type="submit" class="login-button">Create Account</button>
             <button type="button" onclick="window.history.back();" class="back-button">Back</button>
             <div class="register-button">
-                Already have an account? <a class="register-text" href="login.php">Login</a>
+                Already have an account? →<a class="register-text" href="login.php">Login</a>
             </div>
         </div>
     </form>

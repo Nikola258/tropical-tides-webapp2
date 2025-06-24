@@ -43,6 +43,7 @@ if (isset($_SESSION['page_message'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking - Tropical Tides</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/booking-page.css">
 </head>
@@ -58,13 +59,13 @@ if (isset($_SESSION['page_message'])) {
     </div>
 
     <main class="booking-page-main">
-        <div class="form-container">
-            <?php if ($page_message): ?>
-                <div class="alert <?php echo $message_type === 'success' ? 'alert-success' : 'alert-danger'; ?>">
-                    <?php echo htmlspecialchars($page_message); ?>
-                </div>
-            <?php endif; ?>
+        <?php if ($page_message): ?>
+            <div class="alert <?php echo $message_type === 'success' ? 'alert-success' : 'alert-danger'; ?>">
+                <?php echo htmlspecialchars($page_message); ?>
+            </div>
+        <?php endif; ?>
 
+        <div class="form-container">
             <form action="include/booking-action.php" method="POST" class="booking-form">
                 <div class="form-row">
                     <div class="form-group">
@@ -79,7 +80,7 @@ if (isset($_SESSION['page_message'])) {
                 <div class="form-row">
                     <div class="form-group">
                         <label for="where-to">Where to:</label>
-                        <select id="where-to" name="plaats" required>
+                        <select class="where-to" id="where-to" name="plaats" required>
                             <option value="" disabled selected>Select a destination</option>
                             <?php foreach ($destinations as $dest): ?>
                                 <option value="<?php echo htmlspecialchars($dest['plaats']); ?>"><?php echo htmlspecialchars($dest['plaats']); ?></option>
