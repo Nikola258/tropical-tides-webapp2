@@ -1,32 +1,3 @@
-<?php
-// Prevent direct access to this file.
-if (!defined('IS_USER_DASHBOARD')) {
-    die("This page cannot be accessed directly. Please go through the user dashboard.");
-}
-
-// All necessary variables like $conn and the session are available from user-dashboard.php
-
-// Fetch bookings for the logged-in user
-$user_id = $_SESSION['user_id'];
-$bookings = [];
-
-try {
-    $stmt = $conn->prepare(
-        "SELECT id, plaats, personen, arrivals_date, leaving_date, booking_date 
-         FROM user_bookings 
-         WHERE user_id = :user_id 
-         ORDER BY booking_date DESC"
-    );
-    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
-    $stmt->execute();
-    $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    // In a real app, you would log this error.
-    error_log("Failed to fetch user bookings: " . $e->getMessage());
-    echo "<div class='alert alert-danger'>Could not retrieve your bookings due to a database error.</div>";
-}
-?>
-
 <!doctype html>
 <html lang="en">
 <head>

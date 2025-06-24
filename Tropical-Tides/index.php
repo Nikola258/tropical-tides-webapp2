@@ -59,8 +59,8 @@ include('./dbcalls/read.php');
 
 <section class="search_bar">
     <form action="./dbcalls/search.php" class="search_balk" method="GET">
-        <input type="text" placeholder="Locatie" name="plaats">
-        <input type="text" placeholder="Aantal Pers." name="personen">
+        <input type="text" placeholder="Location" name="plaats">
+        <input type="text" placeholder="Number of Persons" name="personen">
         <input type="date" placeholder="VertrekDatum" name="datum">
         <input type="submit" value="Search">
     </form>

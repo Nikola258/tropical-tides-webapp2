@@ -4,7 +4,11 @@
 }
 input{
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 .send-button{
     margin-top: 20px;
+}
+textarea{
+    margin-top: 10px;
 }

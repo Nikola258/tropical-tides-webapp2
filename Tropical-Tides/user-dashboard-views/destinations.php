@@ -1,10 +1,3 @@
-<?php
-// Prevent direct access to this file.
-if (!defined('IS_USER_DASHBOARD')) {
-    die("This page cannot be accessed directly. Please go through the user dashboard.");
-}
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
