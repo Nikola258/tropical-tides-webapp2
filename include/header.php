@@ -1,3 +1,5 @@
+<?php
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +19,11 @@
             <a href="/index.php">Home</a>
             <a href="/about.php">About</a>
             <a href="/booking.php">Booking</a>
-            <a href="/auth-views/login.php">Login</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="/user-dashboard.php">Dashboard</a>
+            <?php else: ?>
+                <a href="/auth-views/login.php">Login</a>
+            <?php endif; ?>
         </nav>
     </div>
 </body>

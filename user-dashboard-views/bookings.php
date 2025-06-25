@@ -1,3 +1,26 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once __DIR__ . '/../include/db.php';
+
+$bookings = [];
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+    try {
+        $stmt = $conn->prepare("SELECT * FROM user_bookings WHERE user_id = :user_id ORDER BY arrivals_date DESC");
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        // Optionally log error
+        $bookings = [];
+    }
+} else {
+    // Not logged in, show empty bookings
+    $bookings = [];
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -32,6 +55,7 @@
                 <th>Arrival Date</th>
                 <th>Leaving Date</th>
                 <th>Booked On</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -42,12 +66,33 @@
                     <td><?php echo htmlspecialchars($booking['personen']); ?></td>
                     <td><?php echo htmlspecialchars(date("d-m-Y", strtotime($booking['arrivals_date']))); ?></td>
                     <td><?php echo htmlspecialchars(date("d-m-Y", strtotime($booking['leaving_date']))); ?></td>
-                    <td><?php echo htmlspecialchars(date("d-m-Y H:i", strtotime($booking['booking_date']))); ?></td>
+                    <td><?php echo htmlspecialchars(date("d-m-Y H:i", strtotime($booking['booking_date'] ?? 'now'))); ?></td>
+                    <td>
+                        <form method="POST" action="../include/cancel-booking.php" onsubmit="return confirm('Are you sure you want to cancel your booking?');" style="display:inline;">
+                            <input type="hidden" name="booking_id" value="<?php echo htmlspecialchars($booking['id']); ?>">
+                            <button type="submit" class="cancel-btn">Cancel</button>
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
     <?php endif; ?>
 </div>
+
+<style>
+.cancel-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.cancel-btn:hover {
+    background: #c0392b;
+}
+</style>
 </body>
 </html>

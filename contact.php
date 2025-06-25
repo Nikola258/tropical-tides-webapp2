@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include('dbcalls/conn.php');
 
 $page_message = '';
@@ -7,6 +9,9 @@ if (isset($_SESSION['page_message'])) {
     $page_message = $_SESSION['page_message'];
     unset($_SESSION['page_message']);
 }
+// Prefill user info if logged in
+$user_name = isset($_SESSION['name']) ? $_SESSION['name'] : '';
+$user_email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
 ?>
 <!doctype html>
 <html lang="en">
@@ -36,9 +41,9 @@ if (isset($_SESSION['page_message'])) {
             <?php endif; ?>
             <form action="include/contact-action.php" method="post" class="crud-form" style="max-width: 500px;">
                 <label for="contact_name">Name:</label>
-                <input class="contact-form" type="text" name="contact_name" id="contact_name" required>
+                <input class="contact-form" type="text" name="contact_name" id="contact_name" value="<?php echo htmlspecialchars($user_name); ?>" <?php echo $user_name ? 'readonly' : ''; ?> required>
                 <label for="contact_email">E-mail:</label>
-                <input class="contact-form" type="email" name="contact_email" id="contact_email" required>
+                <input class="contact-form" type="email" name="contact_email" id="contact_email" value="<?php echo htmlspecialchars($user_email); ?>" <?php echo $user_email ? 'readonly' : ''; ?> required>
                 <label for="contact_message">Message:</label>
                 <textarea name="contact_message" id="contact_message" rows="4" style="width:100%; border-radius:6px; padding:8px;"></textarea>
                 <input class="send-button" type="submit" name="contact_submit" value="Submit">

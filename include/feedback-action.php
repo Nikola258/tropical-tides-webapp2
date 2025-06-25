@@ -9,7 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['feedback_submit'])) {
         die('Je moet ingelogd zijn om een beoordeling te plaatsen.');
     }
 
-    $plaats = $_POST['plaats'];
+    // Normalize the place name for consistency
+    $plaats = trim(mb_strtolower($_POST['plaats']));
     $user_name = $_SESSION['name']; 
     $user_email = $_SESSION['email'];
     $user_rating = $_POST['user_rating'];
@@ -39,6 +40,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['feedback_submit'])) {
             $stmt->bindParam(':user_rev', $user_review); // user_review also gets the review text
 
             if ($stmt->execute()) {
+                // Update average rating in booking table (normalize plaats in booking as well)
+                $avg_stmt = $conn->prepare("SELECT AVG(user_rating) as avg_rating FROM feedback WHERE plaats = :plaats");
+                $avg_stmt->bindParam(':plaats', $plaats);
+                $avg_stmt->execute();
+                $avg = $avg_stmt->fetch(PDO::FETCH_ASSOC);
+                $average_rating = $avg['avg_rating'] ? round($avg['avg_rating'], 1) : 0;
+                $update_stmt = $conn->prepare("UPDATE booking SET rating = :rating WHERE LOWER(TRIM(plaats)) = :plaats");
+                $update_stmt->bindParam(':rating', $average_rating);
+                $update_stmt->bindParam(':plaats', $plaats);
+                $update_stmt->execute();
                 $message = "Bedankt voor je beoordeling!";
             } else {
                 $message = "Er is iets misgegaan. Probeer het opnieuw.";
