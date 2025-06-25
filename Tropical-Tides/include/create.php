@@ -2,7 +2,7 @@
 <h1>create</h1>
 
 <?php
-include('./db.php');
+include('../dbcalls/conn.php');
 
 $plaats = $_POST['plaats'];
 $beschrijving = $_POST['beschrijving'];
@@ -22,12 +22,5 @@ $stmt->bindParam(":prijs", $prijs);
 $stmt->bindParam(":img", $img);
 $stmt->bindParam(":rating", $rating);
 $stmt->bindParam(":datum", $datum);
-
-
-
-
 $stmt->execute();
-
-
-
 ?>
