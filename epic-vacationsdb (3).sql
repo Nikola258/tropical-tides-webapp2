@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb
--- Gegenereerd op: 24 jun 2025 om 11:06
+-- Gegenereerd op: 25 jun 2025 om 06:44
 -- Serverversie: 11.7.2-MariaDB-ubu2404
 -- PHP-versie: 8.2.8
 
@@ -66,11 +66,7 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`id`, `user_id`, `plaats`, `beschrijving`, `personen`, `prijs`, `img`, `rating`, `datum`) VALUES
-(1, NULL, 'gendt', 'mooie plaats in nederland', 6, 100.1, 'assets/img/plaats.png', 0, '2025-06-17'),
-(2, NULL, 'new york', 'usa', 4, 99.9, 'assets/img/plaats.png', 0, '2025-06-04'),
-(3, NULL, ' ja', '  us', 4, 3.5, '  ', 0, '2554-02-12'),
-(5, NULL, 'yuwiudew', 'wytdbekjw', 6, 1200000, 'https://th.bing.com/th/id/OIP.u6gkB8KalTRnl2eMnqr7tQHaFj?o=7rm=3&rs=1&pid=ImgDetMain', 5, '2025-06-22'),
-(6, NULL, 'beach', 'very nice beach ', 2, 1224, 'https://th.bing.com/th/id/OIP.YwEcNbqM98l7IZHtfw4QxAHaFQ?rs=1&pid=ImgDetMain', 0, '2025-06-24');
+(8, NULL, 'Bora Bora', 'Beautiful beach.', 5, 3600, 'https://cdn.wallpapersafari.com/28/56/LGPgu3.jpg', 3.3, '2025-06-24');
 
 -- --------------------------------------------------------
 
@@ -94,11 +90,9 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `plaats`, `user_name`, `user_email`, `user_description`, `user_rating`, `user_review`, `created_at`) VALUES
-(1, 'gendt', 'root', 'root@gmail.com', 'ebfyej', 4, 'ebfyej', '2025-06-22 21:30:57'),
-(2, 'yuwiudew', 'root', 'root@gmail.com', 'wow so nice', 5, 'wow so nice', '2025-06-22 21:31:14'),
-(3, 'beach', 'root', 'root@gmail.com', 'so nice beach wooww', 4, 'so nice beach wooww', '2025-06-23 06:39:53'),
-(4, ' ja', 'root', 'root@gmail.com', 'this vacation was bad', 1, 'this vacation was bad', '2025-06-23 06:40:13'),
-(5, ' ja', 'root', ' root@gmail.com', '', 3, '', '2025-06-23 09:59:03');
+(6, 'Bora bora', 'root', ' root@gmail.com', 'amazing beach', 5, 'amazing beach', '2025-06-24 20:28:59'),
+(8, 'bora bora', 'root', 'user@gmail.com', 'it was alright', 4, 'to be honest i didnt really like it', '2025-06-24 20:59:03'),
+(9, 'bora bora', 'test1', 'test123@gmail.com', 'dw', 1, 'dw', '2025-06-24 21:18:22');
 
 -- --------------------------------------------------------
 
@@ -131,10 +125,8 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `name`, `email`, `message`, `created_at`) VALUES
-(1, 'testuser', 'test@gmail.com', 'hello test', '2025-06-22 21:07:22'),
-(2, 'ewe3fr43q', '34qr31e234q@gmail.com', '34qr43e', '2025-06-22 21:09:15'),
-(3, 'root', 'root@gmail.com', 'hello this is a test message', '2025-06-24 10:11:23'),
-(4, 'Root', 'root@gmail.com', 'hello again', '2025-06-24 10:12:49');
+(9, 'root', ' root@gmail.com', 'ferghfvb3kjq,', '2025-06-24 20:12:11'),
+(12, 'root', ' root@gmail.com', 'test', '2025-06-24 20:12:26');
 
 -- --------------------------------------------------------
 
@@ -186,17 +178,9 @@ CREATE TABLE `user_bookings` (
 --
 
 INSERT INTO `user_bookings` (`id`, `user_id`, `naam`, `email`, `plaats`, `adres`, `telefoonnummer`, `personen`, `arrivals_date`, `leaving_date`, `booking_date`) VALUES
-(1, 11, 'root', 'root@gmail.com', 'ja', '5362PZ', '06098765452', 4, '2025-06-29', '2025-06-29', '2025-06-22 21:40:22'),
-(2, 11, 'root', 'root@gmail.com', 'ja', '5362PZ', '06098765452', 4, '2025-06-29', '2025-06-29', '2025-06-22 21:41:07'),
-(3, 11, 'root', 'root@gmail.com', 'gendt', '2378PZ', '0687542696', 4, '2025-06-23', '2025-06-29', '2025-06-22 21:44:33'),
 (4, 12, 'root', 'user@gmail.com', 'beach', 'y43874hri', '098765432', 2, '2025-06-23', '2025-07-03', '2025-06-23 07:15:31'),
-(5, 14, 'test1', 'test123@gmail.com', 'yuwiudew', '2632PZ', '068263556', 3, '2025-06-25', '2025-06-27', '2025-06-24 09:17:46'),
-(6, 14, 'test1', 'test123@gmail.com', ' ja', '4yu3jhk', '3414r314', 43, '2025-06-29', '2025-07-03', '2025-06-24 09:18:31'),
-(7, 14, 'test1', 'test123@gmail.com', ' ja', 'ty3287', '/0987675432', 3, '2025-06-28', '2025-07-03', '2025-06-24 09:20:51'),
-(8, 14, 'test1', 'test123@gmail.com', 'gendt', '4523PZ', '06836234266', 4, '2025-06-26', '2025-07-03', '2025-06-24 09:22:34'),
-(9, 14, 'test1', 'test123@gmail.com', 'new york', '6355PZ', '06987654321', 1, '2025-06-27', '2025-07-03', '2025-06-24 09:27:39'),
-(10, 11, 'root', ' root@gmail.com', 'gendt', '3646pPZ', '09876543', 1, '2025-06-27', '2025-07-03', '2025-06-24 09:34:45'),
-(11, 11, 'root', ' root@gmail.com', 'yuwiudew', '8536PZ', '0698765431', 1, '2025-06-25', '2025-07-02', '2025-06-24 11:04:59');
+(12, 11, 'root', ' root@gmail.com', ' ja', '2542PZ', '0698765432456', 1, '2025-06-24', '2025-07-01', '2025-06-24 18:40:26'),
+(16, 11, 'root', ' root@gmail.com', 'Bora Bora', '8373PZ', '068273633', 1, '2025-06-24', '2025-07-01', '2025-06-24 21:09:51');
 
 -- --------------------------------------------------------
 
@@ -274,13 +258,13 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT voor een tabel `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT voor een tabel `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT voor een tabel `feedback_role`
@@ -292,7 +276,7 @@ ALTER TABLE `feedback_role`
 -- AUTO_INCREMENT voor een tabel `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT voor een tabel `users`
@@ -304,7 +288,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `user_bookings`
 --
 ALTER TABLE `user_bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT voor een tabel `user_roles`
