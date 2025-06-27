@@ -13,6 +13,17 @@
 <?php
 include ('./conn.php');
 include('./read.php');
+?>
+<div class="hero-home">
+    <div class="hero-overlay"></div>
+    <div class="header-absolute">
+        <?php include "../include/header.php"; ?>
+</div>
+<div class="hero-content">
+    <div class="hero-title">Explore our Tropical Destinations!</div>
+</div>
+</div>
+<?php
 
 $plaats  = '%' . $_GET["plaats"]. '%';
 $personen  = $_GET["personen"];
@@ -70,3 +81,8 @@ $result = $stmt->fetchAll();
 </section>
 
 </body>
+<?php
+include ('../include/footer.php');
+?>
+</html>
+<?php

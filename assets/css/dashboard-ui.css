@@ -272,3 +272,11 @@ img{
 .btn-delete:hover {
     background-color: #c82333;
 }
+.spacing{
+    flex-direction: column;
+    padding: 10px;
+}
+.booking_spacing{
+    flex-direction: column;
+    margin: 20px;
+}
