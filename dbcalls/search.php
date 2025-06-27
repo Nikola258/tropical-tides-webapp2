@@ -11,7 +11,7 @@
 <body>
 
 <?php
-include ('./conn.php');
+include('./conn.php');
 include('./read.php');
 ?>
 <div class="hero-home">
@@ -82,7 +82,7 @@ $result = $stmt->fetchAll();
 
 </body>
 <?php
-include ('../include/footer.php');
+include('../include/footer.php');
 ?>
 </html>
 <?php

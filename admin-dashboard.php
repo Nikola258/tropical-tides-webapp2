@@ -20,7 +20,7 @@
                 <section class="column">
                     <h2>Boekingen beheren</h2>
 
-                    <form class="crud-form" action="./include/create.php" method="post">
+                    <form class="crud-form" action="include/create.php" method="post">
                         <label for="plaats">Plaats:</label>
                         <input type="text" name="plaats" id="plaats" required>
 
@@ -43,7 +43,7 @@
                         <input type="date" name="datum" id="datum" required>
                         <input type="submit" value="Toevoegen">
                     </form>
-                    <form action="./dbcalls/backToMenu.php" method="post" style="margin-bottom: 24px;">
+                    <form action="../dbcalls/backToMenu.php" method="post" style="margin-bottom: 24px;">
                         <input type="submit" value="Terug naar menu">
                     </form>
 
@@ -53,7 +53,7 @@
                     foreach ($result as $key => $value) {
                         ?>
                         <div class="crud-item">
-                            <form action="./include/update.php" method="post">
+                            <form action="include/update.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $value['id']; ?>" >
 
                                 <label>Plaats</label>
@@ -79,7 +79,7 @@
                                 <button type="submit" class="update-button">Update</button>
                             </form>
 
-                            <form action="./include/delete.php" method="POST" style="margin-top: 8px;">
+                            <form action="include/delete.php" method="POST" style="margin-top: 8px;">
                                 <input type="hidden" name="id" value="<?php echo $value['id']; ?>" >
                                 <input type="submit" value="Verwijderen">
                             </form>

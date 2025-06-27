@@ -19,7 +19,7 @@ session_start();
 </video>
 
 <section class="login-page">
-    <form method="POST" action="./auth-logic/auth.php">
+    <form method="POST" action="auth-logic/auth.php">
         <h1>LOGIN</h1>
         <input type="hidden" name="csrf_token" value="">
 
